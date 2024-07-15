@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>REGISTRATION FORM</h1>
+    </header>
+    <main>
+        <section>
+            <div class="background">
+            </div>
+            <div class="container">
+                <form id="validation_form">
+                    <div class="data d-flex">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                                class="bi bi-person" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" placeholder="Enter Username" value=""
+                                oninput="validateUserName()">
+                            <span class="invalid_msg"></span>
+                        </div>
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" placeholder="Enter Email" value=""
+                                oninput="validateEmail()">
+                            <span class="invalid_msg"></span>
+                        </div>
+                        <div>
+                            <label for="phone">Phone Number:</label>
+                            <input type="text" name="phone" id="phone" placeholder="Enter Phone Number" value=""
+                                oninput="validateNumber()">
+                            <span class="invalid_msg"></span>
+                        </div>
+                        <div>
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" placeholder="Enter Password" value=""
+                                title="Password should be atleast 8 characters in length."
+                                oninput="validatePassWord(3)">
+                            <span class="invalid_msg"></span>
+                        </div>
+                        <div>
+                            <label for="cpassword">Confirm Password:</label>
+                            <input type="password" name="cpassword" id="cpassword" placeholder="Confirm password"
+                                value="" oninput="validatePassWord(4)">
+                            <span class="invalid_msg"></span>
+                        </div>
+                        <div>
+                            <button class="submit-btn" type="submit">Register</button>
+                        </div>
+                    </div>
+                    <div id="pop-up" class="d-flex">
+                        <h2>MESSAGE</h2>
+                        <span id="message"></span>
+                        <button id="ok-btn" type="button">OK</button>
+                    </div>
+                    <div id="confirm-pop-up" class="d-flex">
+                        <h2>MESSAGE</h2>
+                        <span id="confirm-message"></span>
+                        <div>
+                            <input id="cancel-btn" type="button" value="NO">
+                            <input id="confirmed" type="button" value="YES">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="registration-data d-flex">
+                    <h2>REGISTRATION DATA</h2>
+                    <div>
+                        <table id="registered-data">
+                            <thead>
+                                <tr>
+                                    <th>USERNAME</th>
+                                    <th>EMAIL</th>
+                                    <th>PHONE NUMBER</th>
+                                    <th>PASSWORD</th>
+                                    <th>ACTION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

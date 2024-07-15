@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+header{
+    text-align: center;
+    background-color: rgb(32, 96, 153);
+    color: white;
+    position: sticky;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 720px;
+    z-index: -1;
+    background-image: linear-gradient(to bottom right,
+        #ffff99, 
+        #99ff99, 
+        #66ccff);
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+.d-flex{
+    display: flex;
+}
+#validation_form{
+    margin: 50px 10px 0px 10px ;
+    display: flex;
+    justify-content: center;
+}
+form .data{
+    border: 2px solid rgb(144, 144, 144);
+    border-radius: 10px;
+    background:linear-gradient(310deg, #1584aa, #bfb2ee);
+    box-shadow: 1px 1px 15px 5px rgb(64, 64, 64);
+    color: white;
+    width:400px;
+    row-gap: 15px;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 20px;
+}
+form div div svg{
+    display: flex;
+    margin: auto;
+    border: 3px solid #ffffff;
+    border-radius: 50px;
+    padding: 5px;
+}
+form div div:last-child{
+    position: relative;
+    left: 0;
+    right:0;
+    margin: auto;
+}
+.data input{
+    display: block;
+    margin:10px 0px;
+    width:100%;
+    font-size: 16px;
+    padding: 5px;
+}
+.invalid_msg{
+    color: red;
+    font-size: 16px;
+}
+.submit-btn{
+    font-size: 20px;
+    color: white;
+    background-color: rgb(114, 43, 195);
+    border-radius: 40px;
+    padding:10px;
+    border-style: none;
+    cursor: pointer;
+}
+#pop-up, #confirm-pop-up{
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    z-index: 2;
+    border: 1px solid rgb(255, 0, 0);
+    background:#eae6e6;
+    border-radius: 5px;
+    width: 25%;
+    left:0;
+    right:0;
+    margin: auto;
+    padding: 10px;
+    top: 40%;
+    display: none;
+}
+@media only screen and (max-width:576px){
+    #pop-up{
+        width:90%;
+    }
+}
+@media only screen and (max-width:992px) and (min-width:576px){
+    #pop-up{
+        width:50%;
+    }
+}
+@media only screen and (max-width:1400px) and (min-width:992px){
+    #pop-up{
+        width:35%;
+    }
+}
+#pop-up span{
+    font-size: 18px;
+}
+#ok-btn{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    padding:5px 20px;
+    border-radius: 40px;
+    border:1px solid rgb(118, 118, 118);
+    background-color: red;
+}
+.new_ok_btn{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    padding:5px 20px;
+    border-radius: 40px;
+    border:1px solid rgb(118, 118, 118);
+    background-color: #1ba026;
+}
+.ok_btn1{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    padding:5px 20px;
+    border-radius: 40px;
+    border:1px solid rgb(118, 118, 118);
+    background-color: red;
+}
+#confirm-pop-up div input{
+    font-size:16px;
+    font-weight: bold;
+    padding:5px 10px;
+    border: none;
+    border-radius: 40px;
+    margin: 0px 20px;
+    color: white;
+}
+#cancel-btn{
+    background-color: red;
+}
+#confirmed{
+    background-color: #1ba026;
+}
+.registration-data{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px;
+}
+.registration-data h2{
+    margin: 20px 0px;
+}
+table, th, td {
+    border: 1px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+    padding:5px;
+  }
+th{
+    background-color: #e4e4e4;
+    text-align: center;
+}
+td {
+    background-color: #ffffff;
+    text-align: center;
+}
+#action-btn-1, #action-btn-2{
+    width:80px;
+    padding: 5px;
+    margin: 5px 0px;
+    color: #ffffff;
+    border: 1px solid rgba(0,0,0,0);
+    border-radius: 4px;
+}
+#action-btn-2{
+    background-color: red;
+}
+#action-btn-1{
+    background-color: #1ba026;
+}
